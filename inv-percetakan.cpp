@@ -75,14 +75,65 @@ void update_item(printing_item* head, string nm){
 
 // Dikerjakan oleh Rio
 void hapus_item(printing_item* head, string nm){
+    if (head == nullptr) {
+        cout << "Daftar Kosong." << endl;
+        return;
+    }
+
+    printing_item* temp = head;
+    if (temp->nama == nm){
+        head = temp->selanjutnya;
+        delete temp;
+        cout << "Item Dihapus" << endl;
+        return;
+    }
+
+    printing_item* sebelum = temp;
+    temp = temp->selanjutnya;
+
+    while (temp != nullptr){
+        if (temp->nama == nm){
+            sebelum->selanjutnya = temp->selanjutnya;
+            delete temp;
+            cout << "\n[!] Item Dihapus\n" << endl;
+            return;
+        }
+        sebelum = temp;
+        temp = temp->selanjutnya;
+    }
+
+    cout << "Item Tidak Ada" << endl;
+    
 }
 
 // Di kerjakan oleh Hipni
 void tampilkan_item(printing_item* head){
+    if(head == nullptr) {
+        cout << "Tidak ada item dalam inventaris." << endl;
+        return;
+    }
+
+    printing_item* temp = head;
+    int nomor = 1;
+    while(temp != nullptr) {
+        cout << "Invetaris Item #" << nomor << " :" << endl; nomor++;
+        cout << "\tNama \t:" << temp->nama << endl;
+        cout << "\tDesk \t:" << temp->deskripsi << endl;
+        cout << "\tStok \t:" << temp->stok << endl;
+        cout << "----------------------------------" << endl;
+        temp = temp->selanjutnya;
+    }
 }
 
 int main(){
     printing_item* inventaris = nullptr;
-    tambah_item(inventaris, "Buku A", "Deskripsi Buku A", 10);
+
+    tambah_item(inventaris, "A4 Sinar Dunia", "Kertas A4 Sinar Dunia 80gsm", 100);
+    tambah_item(inventaris, "A4 PaperOne", "Kertas A4 PaperOne 70gsm", 200);
+    
+    tampilkan_item(inventaris);
+    
+    hapus_item(inventaris, "A4 PaperOne");
+    tampilkan_item(inventaris);
     return 0;
 }
