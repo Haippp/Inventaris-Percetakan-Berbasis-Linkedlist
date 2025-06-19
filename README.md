@@ -28,7 +28,21 @@ Pada prosedur ini juga dilengkapi gerbang logika dimana jika pointer head kosong
 ```
 
 ## Sisipkan item
+Fungsi sisipkan_item adalah menempatkan node baru di awal linked list.
+```cpp
+    printing_item* hanyar = new printing_item{nm, desk, stok, head};
+    head = hanyar;
+```
+Node baru akan menunjuk ke node sebelumnya (head). Lalu head diperbarui ke node baru.
 
 ## Update item
+Fungsi ini digunakan untuk mengubah data dari sebuah item dalam linked list berdasarkan nama item yang dimasukkan pengguna. Data yang dapat diubah meliputi nama, deskripsi dan stok.
+```cpp
+    void update_item(printing_item* head, string nm)
+```
+head: pointer ke node pertama dari linked list.
+nm  : nama item yang ingin dicari dan diperbarui.
+
+Secara keseluruhan fungsi ini akan mengubah data dari item yang sudah ada dengan menampilkan tampilan menu berisikan opsi bagian item yang ingin diubah oleh user.
 
 ## Hapus Item
