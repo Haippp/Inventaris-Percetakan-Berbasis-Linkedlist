@@ -1,7 +1,7 @@
 # Deskripsi
 Ini merupakan sebuah repository untuk memenuhi tugas yang diberikan oleh Pak Ade dalam mata kuliah basis data, Dalam hal ini kami membuat sebuah sistem inventaris yang berbasis linked list singly. Kami beranggotakan:
 1. Hipni (C030324071)
-2. Ahmad Dzaki Andreas (C030324115)
+2. Dzaki Ahmad Andreaz (C030324115)
 3. Rizky Satrio Wicaksono (C030324107)
 
 ## Studi Kasus
