@@ -8,3 +8,5 @@ Ini merupakan sebuah repository untuk memenuhi tugas yang diberikan oleh Pak Ade
 Ada sebuah permintaan yang di ajukan oleh klien untuk membuat sebuah sistem inventaris untuk usaha cetaknya. Dalam inventaris tersebut harus berisi nama barang, Spesifikasi barang, dan Stok. Juga sistem tersebut harus memenuhi standar CRUD(Create Read Update Delete).
 
 # Dokumentasi Program
+## Tambah Item
+Prosedur tambah item menggunakan operator `new` yang berfungi untuk mengalokasikan memori secara dinamis(di heap) dan mengembalikan pointer ke memori tersebut.
