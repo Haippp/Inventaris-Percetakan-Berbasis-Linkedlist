@@ -32,3 +32,13 @@ Pada prosedur ini juga dilengkapi gerbang logika dimana jika pointer head kosong
 ## Update item
 
 ## Hapus Item
+
+## Tampilkan Item
+Prosedur tampilkan item berfungsi untuk menampilkan item yang telah di tambahkan sebelumnya, Cara kerja dari item ini pertama dia melakukan pengecekan apakah head berisi alamat atau tidak.
+```cpp
+    if(head == nullptr) {
+        cout << "Tidak ada item dalam inventaris." << endl;
+        return;
+    }
+```
+Jika alamat kosong maka akan menampilkan output : `Tidak ada item dalam inventaris` dan prosedur otomatis terhenti. Akan tetapi jika ada alamat maka program akan terus berjalan sampai alamat terakhir itu `nullptr` atau tidak ada pointer atau alamat.
