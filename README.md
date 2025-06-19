@@ -9,6 +9,26 @@ Ada sebuah permintaan yang di ajukan oleh klien untuk membuat sebuah sistem inve
 
 # Dokumentasi Program
 
+## Tambah Item
+Prosedur tambah item menggunakan operator `new` yang berfungi untuk mengalokasikan memori secara dinamis(di heap) dan mengembalikan pointer ke memori tersebut.
+```cpp
+    if(head == nullptr) {
+        head = itemBaru;
+        return;
+    } 
+```
+Pada prosedur ini juga dilengkapi gerbang logika dimana jika pointer head kosong maka akan otomatis diisi dengan pointer head dari item baru. Akan tetapi jika pointer head nya tidak kosong maka otomatis mencari pointer selanjutnya yang kosong yaitu pointer yang terakhir.
+```cpp
+    printing_item* temp = head;
+    while(temp->selanjutnya != nullptr) {
+        temp = temp->selanjutnya;
+    }
+
+    temp->selanjutnya = itemBaru;
+```
+
 ## Sisipkan item
 
 ## Update item
+
+## Hapus Item
