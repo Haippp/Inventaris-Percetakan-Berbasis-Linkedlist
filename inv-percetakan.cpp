@@ -67,14 +67,15 @@ void update_item(printing_item* head, string nm){
                 default:
                 cout << "Pernyataan tidak valid!";
             }  
-            wahini = wahini->selanjutnya;
+            return;
         }
+        wahini = wahini->selanjutnya;
     }
     cout << "Item dengan nama" << nm << "tidak ditemukan\n";
 }
 
 // Dikerjakan oleh Rio
-void hapus_item(printing_item* head, string nm){
+void hapus_item(printing_item*& head, string nm){
     if (head == nullptr) {
         cout << "Daftar Kosong." << endl;
         return;
